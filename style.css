@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;700&display=swap');
+
+:root {
+    --bg-dark: #05070a;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --accent-cyan: #00f2ff;
+    --accent-purple: #9d00ff;
+    --text-main: #ffffff;
+    --text-dim: #a0a0a0;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1, h2, h3 {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* Slide Container */
+.slides-wrapper {
+    display: flex;
+    width: 300vw;
+    height: 100vh;
+    transition: transform var(--transition-slow);
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Slide 1 - Hero */
+#slide-1 {
+    background: radial-gradient(circle at 70% 30%, rgba(0, 242, 255, 0.1), transparent),
+                radial-gradient(circle at 20% 70%, rgba(157, 0, 255, 0.1), transparent);
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    object-fit: cover;
+    filter: brightness(0.6) contrast(1.2);
+}
+
+.hero-content {
+    max-width: 1000px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 4rem;
+    border-radius: 2.5rem;
+    border: 1px solid var(--glass-border);
+    animation: fadeInUp 1s ease-out;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-dim);
+    margin-bottom: 2rem;
+}
+
+.tagline {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent-cyan);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Slide 2 - Pillars */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.pillar-card {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.pillar-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-cyan);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.pillar-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-cyan);
+}
+
+.pillar-card p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.pillar-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(0, 242, 255, 0.05));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.pillar-card:hover::after {
+    opacity: 1;
+}
+
+/* Slide 3 - Tech Stack */
+.tech-container {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 2rem;
+    padding: 3rem;
+    max-width: 1000px;
+    width: 100%;
+    backdrop-filter: blur(20px);
+}
+
+.tech-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tech-table th, .tech-table td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.tech-table th {
+    color: var(--accent-purple);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+.tech-table td:first-child {
+    font-weight: 600;
+    color: var(--accent-cyan);
+    width: 30%;
+}
+
+.tech-table td:last-child {
+    color: var(--text-main);
+}
+
+/* Navigation Controls */
+.controls {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    display: flex;
+    gap: 1.5rem;
+    z-index: 100;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.nav-btn:hover {
+    background: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+}
+
+.nav-btn.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Progress Indicator */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--accent-cyan), var(--accent-purple));
+    width: 0%;
+    transition: width 0.8s ease;
+    z-index: 1000;
+}
+
+.slide-indicators {
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    z-index: 100;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--accent-cyan);
+    transform: scale(1.3);
+    box-shadow: 0 0 10px var(--accent-cyan);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background elements */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.3;
+    animation: float 20s infinite linear;
+}
+
+.orb-1 { width: 400px; height: 400px; background: var(--accent-cyan); top: -100px; left: -100px; }
+.orb-2 { width: 300px; height: 300px; background: var(--accent-purple); bottom: -50px; right: -50px; animation-delay: -5s; }
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(100px, 50px) scale(1.2); }
+    66% { transform: translate(-50px, 100px) scale(0.9); }
+    100% { transform: translate(0, 0) scale(1); }
+}
