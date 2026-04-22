@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const progress = document.getElementById('progress');
     
     let currentSlide = 0;
-    const totalSlides = 3;
+    const totalSlides = 5;
 
     function updateSlides() {
         // Move the wrapper

@@ -2,6 +2,12 @@
 
 ![Catalyst Hero](assets/hero.png)
 
+## The Challenge: The Saturation Gap
+Modern e-commerce entrepreneurs face a critical hurdle: **The Saturation Gap**.
+*   **Market Overcrowding**: Fighting over the same 1% of trending products.
+*   **Invisible Margins**: Hidden logistics fees killing profit before the first sale.
+*   **Manual Discovery**: Guessing trends based on intuition rather than data.
+
 ## The Strategic Blueprint
 Catalyst isn’t just another dashboard. This platform serves as a strategic blueprint for using artificial intelligence to master the e-commerce supply chain, moving from initial discovery to final profit calculations.
 
@@ -49,3 +55,18 @@ catalyst-slides/
 
 ## Vision
 Catalyst is designed to be the "Engine Room" for modern e-commerce entrepreneurs, transforming raw data into actionable, profitable products.
+
+---
+
+## Presentation Slides
+The interactive presentation now includes:
+1.  **The Challenge**: Identifying the saturation gap.
+2.  **The Strategic Blueprint**: The high-level vision.
+3.  **Core Product Pillars**: Key features and value.
+4.  **Technical Architecture**: Scalable stack details.
+5.  **Conclusion**: A path forward.
+
+---
+
+## Thank You
+Let's build the future of e-commerce intelligence together.
