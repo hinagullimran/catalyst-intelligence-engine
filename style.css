@@ -473,3 +473,43 @@ h1, h2, h3 {
     color: var(--text-dim) !important;
     margin-bottom: 0 !important;
 }
+
+/* Print Styles for PDF Export */
+@media print {
+    body {
+        overflow: visible;
+        height: auto;
+    }
+
+    .slides-wrapper {
+        display: block;
+        width: 100%;
+        transform: none !important;
+    }
+
+    .slide {
+        width: 100%;
+        height: 100vh;
+        page-break-after: always;
+        break-after: page;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Hide UI elements in PDF */
+    .controls, 
+    .slide-indicators, 
+    .progress-bar,
+    .blueprint-grid {
+        display: none !important;
+    }
+
+    .hero-content {
+        backdrop-filter: none;
+        background: rgba(0, 0, 0, 0.8);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+}
