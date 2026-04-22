@@ -27,6 +27,8 @@ The process begins with **digital trend validation**, where AI tools scan social
     *   Identify top physical complaints and desired features directly from consumer feedback.
 5.  **Sourcing Logistics**
     *   Find authentic sourcing and calculate margins to ensure a viable business opportunity.
+6.  **Market Intelligence**
+    *   Real-time tracking of global shipping trends and competitor inventory levels.
 
 ---
 

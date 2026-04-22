@@ -307,9 +307,12 @@ h1, h2, h3 {
 }
 
 /* New Slides Styles */
-.content-box {
-    max-width: 1100px;
-    text-align: center;
+.content-box.glass-card {
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 3rem;
+    border-radius: 2.5rem;
+    border: 1px solid var(--glass-border);
 }
 
 .problem-grid {
