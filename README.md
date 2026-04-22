@@ -1,6 +1,6 @@
 # Catalyst: Next-Gen E-Commerce Intelligence
 
-![Catalyst Hero](../../brain/0fb7e064-369d-4a5b-980f-7df9f30ae6d1/catalyst_hero_vibe_1776810033358.png)
+![Catalyst Hero](assets/hero.png)
 
 ## The Strategic Blueprint
 Catalyst isn’t just another dashboard. This platform serves as a strategic blueprint for using artificial intelligence to master the e-commerce supply chain, moving from initial discovery to final profit calculations.
